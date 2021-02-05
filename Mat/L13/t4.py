@@ -40,7 +40,7 @@ def mult(A, B):
         row = [0] * len(B[0])
         C.append(row)
 
-    n = len(C)  # кількість рядків
+    n = len(C)     # кількість рядків
     m = len(C[0])  # кількість стовпчиків
 
     for i in range(n):

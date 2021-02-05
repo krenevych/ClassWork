@@ -29,4 +29,4 @@ b = readMatrix("t4b.txt")
 c = sumMatrix(a, b)
 print(c)
 
-# writeMatrix(M, "t4b.txt")
+writeMatrix(c, "t4c.txt")
