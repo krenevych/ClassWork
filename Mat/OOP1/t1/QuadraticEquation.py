@@ -5,10 +5,15 @@ class QuadraticEquation:
 
     INF = "inf"
 
-    def __init__(self, a, b, c):
-        self.a = a
-        self.b = b
-        self.c = c
+    def __init__(self, a, b=0, c=0):
+        if (isinstance(a, QuadraticEquation)):
+            self.a = a.a
+            self.b = a.b
+            self.c = a.c
+        else:
+            self.a = a
+            self.b = b
+            self.c = c
 
     def show(self):
         print("%0.2fx**2 + %0.2fx + %0.2f = 0"
@@ -37,12 +42,18 @@ class QuadraticEquation:
 
 
 if __name__ == "__main__":
-    eq1 = QuadraticEquation(0, 0, 0)
-    print(eq1.getSolution())
+    # eq1 = QuadraticEquation(0, 0, 0)
+    # print(eq1.getSolution())
+    # eq2 = QuadraticEquation(1, 2, 1)
+    # print(eq2.getSolution())
+    # eq3 = QuadraticEquation(1, 2, 4)
+    # print(eq3.getSolution())
+    # eq3 = QuadraticEquation(1, 3, 2)
+    # print(eq3.getSolution())
+
     eq2 = QuadraticEquation(1, 2, 1)
-    print(eq2.getSolution())
-    eq3 = QuadraticEquation(1, 2, 4)
-    print(eq3.getSolution())
-    eq3 = QuadraticEquation(1, 3, 2)
-    print(eq3.getSolution())
-    # eq.show()
+    myNewEq = QuadraticEquation(eq2)
+    # myNewEq = eq2
+    myNewEq.a = 0
+    eq2.show()
+    myNewEq.show()
