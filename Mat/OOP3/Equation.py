@@ -9,7 +9,7 @@ class Equation:
     def solve(self):
         if self.b != 0:
             # 4x = 5 => 1
-            return [self.c / self.b]
+            return [-self.c / self.b]
         else:
             if self.c == 0:
                 # 0x = 0 => inf
