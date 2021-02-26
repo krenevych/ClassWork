@@ -16,6 +16,10 @@ class BiQuadraticEquation(QuadraticEquation):
         solutions = []
         for sol in solutions_of_quadratic_equation:
             # y^2 + 0x - sol = 0
+            if sol == self.INF_NUM_SOL:
+                solutions.append(self.INF_NUM_SOL)
+                break
+
             eq1 = QuadraticEquation(1, 0, -sol)
             solutions += eq1.solve()
         solutions.sort()
