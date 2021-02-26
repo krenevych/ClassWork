@@ -29,5 +29,32 @@ class QuadraticEquation(Equation):
 
 
 if __name__ == "__main__":
-    eq = QuadraticEquation(1, 2, 1)
-    eq.show()
+    eq = QuadraticEquation(0, 2, 1)  # 1 solution: -0.5
+    print(eq)
+    print(eq.solve())
+    print()
+
+    eq = QuadraticEquation(0, 0, 1)  # 0 solution
+    print(eq)
+    print(eq.solve())
+    print()
+
+    eq = QuadraticEquation(0, 0, 0)  # inf solution
+    print(eq)
+    print(eq.solve())
+    print()
+
+    eq = QuadraticEquation(1, 2, 1) # 1 solution = -1
+    print(eq)
+    print(eq.solve())
+    print()
+
+    eq = QuadraticEquation(1, -3, 2) # 2 solution = [1, 2]
+    print(eq)
+    print(eq.solve())
+    print()
+
+    eq = QuadraticEquation(1, -3, 9) # 0 solution
+    print(eq)
+    print(eq.solve())
+    print()
