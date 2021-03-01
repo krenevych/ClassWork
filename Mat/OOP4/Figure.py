@@ -110,7 +110,7 @@ class Quadrate(Figure):
         down()
         for i in range(4):
             forward(self._a)
-            right(90)
+            left(90)
         up()
 
 #################### клас Triangle  ############################
@@ -205,9 +205,9 @@ class Rectangle(Figure):
         down()
         for i in range(2):
             forward(self._a)
-            right(90)
+            left(90)
             forward(self._b)
-            right(90)
+            left(90)
         up()
 
 ################################################################
