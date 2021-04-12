@@ -87,6 +87,16 @@ class Saboter(Spy):
         militaryBase.tanks = 0
 
 
+class Helper(Spy):
+    def visitGeneralStaff(self, generalStaff: GeneralStaff):
+        generalStaff.generals += 5
+
+    def visitMilitaryBase(self, militaryBase: MilitaryBase):
+        militaryBase.officers += 10
+        militaryBase.soldiers += 100
+        militaryBase.jeeps += 30
+        militaryBase.tanks += 5
+
 generalStaff = GeneralStaff(20, 100)
 print(generalStaff)
 
@@ -106,3 +116,11 @@ print(Rambo)
 print(generalStaff)
 militaryBase.accept(Rambo)
 print(militaryBase)
+
+AgentSmith = Helper("AgentSmith")
+generalStaff.accept(AgentSmith)
+militaryBase.accept(AgentSmith)
+print(AgentSmith)
+print(generalStaff)
+print(militaryBase)
+
